@@ -1,0 +1,6 @@
+cradle:
+  stack:
+    - path: "./app/Main.hs"
+      component: "uk-charts-reader:exe:uk-charts-reader"
+    - path: "./src"
+      component: "uk-charts-reader:lib"

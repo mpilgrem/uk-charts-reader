@@ -1,0 +1,41 @@
+name:                uk-charts-reader
+synopsis:            Scraper of www.OfficialCharts.com.
+version:             0.1.0.0
+github:              "mpilgrem/uk-charts-reader"
+license:             BSD3
+author:              "Mike Pilgrem"
+maintainer:          "public@pilgrem.com"
+copyright:           "Copyright 2021 Mike Pilgrem"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# category:            Test
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/mpilgrem/uk-charts-reader#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- optparse-applicative
+- scalpel
+- text
+- time
+
+library:
+  source-dirs: src
+
+executables:
+  uk-charts-reader:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - uk-charts-reader
